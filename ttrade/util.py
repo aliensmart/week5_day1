@@ -1,5 +1,6 @@
+from hashlib import sha256,sha512
+import random
 import requests
-from hashlib import sha256
 
 USEFAKE = False
 FAKESTOCK = 'STOCK'
@@ -20,6 +21,15 @@ def hash_password(password):
     hasher.update(password.encode())
     return hasher.hexdigest()
 
+def random_api_key(length=15):
+    seed = (str(random.random()) + str(random.random())).encode()
+
+    hasher = sha512()
+    hasher.update(seed)
+    output = hasher.hexdigest()
+    return output[:length]
+
+    
 
 # if __name__ == "__main__":
 #     print(get_price('aapl'))
