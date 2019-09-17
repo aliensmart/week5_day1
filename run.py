@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
 
-from app import Account
-from app import controller
-from app import Position
-from app import ORM
+from ttrade import Account
+from ttrade import controller
+from ttrade import Position
+from ttrade import ORM
 import os
 
 DIR = os.path.dirname(__file__)

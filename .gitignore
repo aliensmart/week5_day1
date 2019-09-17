@@ -1,0 +1,5 @@
+#github willl ignore these files
+.DS_Store
+config.py
+*.pyc
+*.db
